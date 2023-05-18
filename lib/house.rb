@@ -29,7 +29,9 @@ class House
   end
 
     def area
-      @room.length * @room.width.to_i
+     @rooms.map do |room|
+      room.area
+     end.sum
     end
 
 end
